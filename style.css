@@ -1,7 +1,8 @@
-
- html {
+/*to remove the jumping effect when clicking at the link in the navbar*/
+html {
   scroll-behavior: smooth;
 }
+
 /*to remove browser defaults*/
 body{
 	padding: 0px;
@@ -9,6 +10,7 @@ body{
 	font-family: 'Merriweather', serif;
 	background-color: #eee;
 }
+
 /* navigation bar styles*/
 nav{
 	background-color: rgb(51, 103, 211, 1);
@@ -21,47 +23,91 @@ nav li {
   padding: 20px;
 }
 
+/*to scroll the navigation on top */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px;
+  height: 70px;
 }
 
-.contact {
+/*to push the contacts item to the right of the navbar*/
+.contacts {
 	float: right;
 }
 
+/*to remove the custom link underlining*/
 li a{
 	text-decoration: none;
 	color: white;
 }
-.Egypt-img {
+
+.egypt-img {
     background-image: url(https://www.corinthiantravel.co.uk/blog/wp-content/uploads/2016/07/Everything-you-need-to-know-when-visiting-the-Pyramids-in-Cairo-Egypt.jpg);
     height: 900px;
-    margin-top: -200px;
+    /*I wanted to crop the img from the top*/
+    margin-top: -220px;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 h1 {
 	padding-top: 280px;
 	text-align: center;
 	font-size: 5em;
-	font-weight: 200px;
 	color: white;
 	text-shadow: 1px 1px #3367D3;
 }
 
+/*titles styling */
 h2 {
 	font-size: 3em;
 	text-align: center;
 	font-weight: bold;
 }
 
-/*attractoins styles*/
-.container{
-	padding: 80px;
+/*to ensure that diffrent parts don't collide with smaller screens*/
+.container {
+	padding: 70px 50px 0px 50px;
+	clear: both;
 }
+
+/*teaser styles*/
+iframe {
+	padding-right: 40px;
+	padding-left: 40px 
+}
+
+/*weather table styles*/
+.weather {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+table {
+  width: 100%;
+  table-layout: auto;
+  height: 300px;
+  padding: 20px;
+}
+
+td {
+  width: 150px;
+  font-size: 1.2em;
+}
+
+/*to float the table to the right of the video*/
+#right {
+	float: right;
+}
+/*to remove the floating in smaller screens*/
+@media screen and (max-width: 980px) {
+  #right {
+  	float: none;
+  }
+}
+/*attractoins styles*/
+
 .attr {
 	background-color: white;
 	display: flex;
@@ -74,7 +120,7 @@ h3{
 	text-decoration: underline;
 }
 
-.attr-im {
+.attr-img {
 	padding : 30px;
 	height: 200px;
 	width: 250px;
@@ -82,38 +128,9 @@ h3{
 	float: left;
 	transition: all 1s;
 }
+/*to add on hover tansition*/
 .attr-im:hover {
 	transform: scale(1.1);height: 200px;
 	width: 250px;
 
-}
-/*teaser styles*/
-.weather{
-	font-size: 1.5em;
-	font-weight: bold;
-}
-
-table {
-  width: 100%;
-  table-layout: auto;
-  height: 300px;
-}
-
-td {
-  padding: 10px;
-  width: 150px;
-  font-size: 1.2em;
-}
-tr{
-	border: solid 1px bold;
-}
-
-iframe{
-	padding-left: 40px; 
-}
-#right {
-	float: right;
-}
-#contact {
-	padding: 80px;
 }
